@@ -1,84 +1,634 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>胡英杰 | POI产品经理作品集</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📍</text></svg>">
-  
-  <!-- 字节风格字体 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="./assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胡英杰 - 数据产品经理 | POI数据治理专家</title>
+    <meta name="description" content="胡英杰的个人作品集网站，专注POI数据治理、空间分析、产品策略领域">
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div id="app">加载中...</div>
-  
-  <script>
-    window.$docsify = {
-      name: '胡英杰的作品集',
-      repo: 'https://github.com/your-username/portfolio',
-      loadSidebar: true,
-      subMaxLevel: 3,
-      auto2top: true,
-      search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '未找到结果',
-        depth: 3
-      },
-      pagination: {
-        previousText: '上一篇',
-        nextText: '下一篇',
-        crossChapter: true
-      },
-      copyCode: {
-        buttonText: '复制',
-        errorText: '复制失败',
-        successText: '已复制'
-      },
-      toc: {
-        tocMaxLevel: 2,
-        target: 'h2, h3'
-      },
-      'flexible-alerts': {
-        tip: {
-          label: "提示"
-        },
-        warning: {
-          label: "注意"
-        },
-        danger: {
-          label: "警告"
-        },
-        info: {
-          label: "信息"
-        }
-      }
-    }
-  </script>
-  
-  <!-- Docsify核心 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  
-  <!-- 搜索插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  
-  <!-- 分页插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  
-  <!-- 代码高亮 -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  
-  <!-- 图片缩放 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  
-  <!-- 字数统计 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-count/dist/countable.min.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">HYJ</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-subtitle">
+                        <span class="subtitle-line"></span>
+                        <span>数据产品经理 & POI专家</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Welcome To</span>
+                        <span class="title-gradient">My Portfolio</span>
+                    </h1>
+                    <p class="hero-description">
+                        专注POI数据治理与空间分析，致力于将海量地理数据转化为商业洞察。
+                        擅长构建数据中台、设计LLM驱动的智能应用，实现从数据到商业价值的闭环。
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>查看项目</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>联系我</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">年经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5000万+</span>
+                            <span class="stat-label">POI治理</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">数据项目</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="skill-cloud-container">
+                        <div class="skill-cloud-title">专业技能</div>
+                        <div class="skill-cloud" id="heroSkillCloud">
+                            <span class="skill-tag" data-skill="POI数据">POI数据</span>
+                            <span class="skill-tag" data-skill="空间分析">空间分析</span>
+                            <span class="skill-tag" data-skill="LLM">LLM</span>
+                            <span class="skill-tag" data-skill="数据治理">数据治理</span>
+                            <span class="skill-tag" data-skill="热力分析">热力分析</span>
+                            <span class="skill-tag" data-skill="K-Means">K-Means</span>
+                            <span class="skill-tag" data-skill="产品策略">产品策略</span>
+                            <span class="skill-tag" data-skill="LBS">LBS</span>
+                            <span class="skill-tag" data-skill="Python">Python</span>
+                            <span class="skill-tag" data-skill="商业分析">商业分析</span>
+                            <span class="skill-tag" data-skill="坐标纠偏">坐标纠偏</span>
+                            <span class="skill-tag" data-skill="数据中台">数据中台</span>
+                        </div>
+                    </div>
+                    <div class="grid-decoration">
+                        <div class="grid-line grid-line-1"></div>
+                        <div class="grid-line grid-line-2"></div>
+                        <div class="grid-line grid-line-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">关于我<span class="title-dot">.</span></h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-intro">
+                    <div class="intro-card">
+                        <div class="card-accent"></div>
+                        <h3>个人简介</h3>
+                        <p>
+                            5年+数据产品经验，专注于POI数据治理、空间分析与智能应用产品设计。
+                            具备从底层数据架构到上层产品策略的全链路能力，主导过多个千万级数据中台项目，
+                            擅长将业务需求转化为技术方案，实现数据驱动的商业决策。
+                        </p>
+                        <p>
+                            核心优势：跨域数据融合能力 + 空间分析方法论 + LLM应用落地经验。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-cards">
+                    <!-- Education -->
+                    <div class="about-card education-card">
+                        <div class="card-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>教育背景</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2015 - 2019</span>
+                                    <h5>地理信息科学 · 本科</h5>
+                                    <p>空间数据分析方向</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="about-card experience-card">
+                        <div class="card-header">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>工作经历</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2022 - 至今</span>
+                                    <h5>高级数据产品经理</h5>
+                                    <p>负责POI数据中台建设与LLM应用落地</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2020 - 2022</span>
+                                    <h5>数据产品经理</h5>
+                                    <p>主导LBS数据治理与商业分析平台</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2019 - 2020</span>
+                                    <h5>数据分析师</h5>
+                                    <p>空间数据可视化与需求分析</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">专业技能<span class="title-dot">.</span></h2>
+            </div>
+            
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="poi">POI数据</button>
+                <button class="filter-btn" data-filter="analysis">数据分析</button>
+                <button class="filter-btn" data-filter="product">产品工具</button>
+                <button class="filter-btn" data-filter="language">语言能力</button>
+            </div>
+            
+            <div class="skills-grid" id="skillsGrid">
+                <!-- POI数据 -->
+                <div class="skill-card" data-category="poi">
+                    <div class="skill-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>POI数据治理</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="95"></div>
+                        </div>
+                        <span class="skill-level">精通</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="poi">
+                    <div class="skill-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>坐标纠偏</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="analysis">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>K-Means聚类</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="analysis">
+                    <div class="skill-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>热力图分析</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                        <span class="skill-level">精通</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="product">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>LLM应用</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="product">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>数据中台设计</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="product">
+                    <div class="skill-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>LBS商业分析</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="93"></div>
+                        </div>
+                        <span class="skill-level">精通</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="analysis">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>商业转化分析</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="poi">
+                    <div class="skill-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>POI召回优化</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="87"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="language">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>Python</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="language">
+                    <div class="skill-icon">
+                        <i class="fas fa-sql"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>SQL</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-category="product">
+                    <div class="skill-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <div class="skill-info">
+                        <h5>产品策略设计</h5>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                        <span class="skill-level">精通</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">项目作品<span class="title-dot">.</span></h2>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">全部项目</button>
+                <button class="filter-btn" data-filter="ai">AI应用</button>
+                <button class="filter-btn" data-filter="data">数据治理</button>
+                <button class="filter-btn" data-filter="lbs">LBS商业</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project 1: AI行程助手 -->
+                <div class="project-card" data-category="ai" data-project="ai-travel">
+                    <div class="card-image">
+                        <img src="images/route-flow.gif" alt="AI行程助手">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <button class="btn-view" data-project="ai-travel">
+                                    <i class="fas fa-expand"></i>
+                                    <span>查看详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag" data-tag="LLM">LLM</span>
+                            <span class="tag" data-tag="POI召回">POI召回</span>
+                            <span class="tag" data-tag="产品策略">产品策略</span>
+                        </div>
+                        <h3 class="card-title">AI行程助手</h3>
+                        <p class="card-desc">目的地搜索与商业转化重构 - 基于LLM的智能旅行规划系统</p>
+                        <div class="card-footer">
+                            <span class="project-date">2024</span>
+                            <span class="project-status">已完成</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: POI数据治理 -->
+                <div class="project-card" data-category="data" data-project="poi-gov">
+                    <div class="card-image">
+                        <img src="images/poi-spatial-distribution.gif" alt="POI数据治理">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <button class="btn-view" data-project="poi-gov">
+                                    <i class="fas fa-expand"></i>
+                                    <span>查看详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag" data-tag="空间分析">空间分析</span>
+                            <span class="tag" data-tag="坐标纠偏">坐标纠偏</span>
+                            <span class="tag" data-tag="数据治理">数据治理</span>
+                        </div>
+                        <h3 class="card-title">POI数据治理与空间聚类</h3>
+                        <p class="card-desc">千万级POI数据的坐标纠偏与K-Means商业聚类分析</p>
+                        <div class="card-footer">
+                            <span class="project-date">2023</span>
+                            <span class="project-status">已完成</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: 城市数据中台 -->
+                <div class="project-card" data-category="data" data-project="data-platform">
+                    <div class="card-image">
+                        <img src="images/shenzhen-map.gif" alt="城市数据中台">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <button class="btn-view" data-project="data-platform">
+                                    <i class="fas fa-expand"></i>
+                                    <span>查看详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag" data-tag="数据中台">数据中台</span>
+                            <span class="tag" data-tag="热力分析">热力分析</span>
+                            <span class="tag" data-tag="K-Means">K-Means</span>
+                        </div>
+                        <h3 class="card-title">城市级POI空间数据中台</h3>
+                        <p class="card-desc">深圳全域POI数据采集、清洗、存储与可视化分析平台</p>
+                        <div class="card-footer">
+                            <span class="project-date">2023</span>
+                            <span class="project-status">已完成</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: LBS商业转化 -->
+                <div class="project-card" data-category="lbs" data-project="lbs-biz">
+                    <div class="card-image">
+                        <img src="images/regional-connection.gif" alt="LBS商业转化">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <button class="btn-view" data-project="lbs-biz">
+                                    <i class="fas fa-expand"></i>
+                                    <span>查看详情</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="tag" data-tag="LBS">LBS</span>
+                            <span class="tag" data-tag="商业分析">商业分析</span>
+                            <span class="tag" data-tag="选址优化">选址优化</span>
+                        </div>
+                        <h3 class="card-title">LBS商业转化与选址优化</h3>
+                        <p class="card-desc">基于空间分析的商圈价值评估与门店选址决策系统</p>
+                        <div class="card-footer">
+                            <span class="project-date">2022</span>
+                            <span class="project-status">已完成</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">联系我<span class="title-dot">.</span></h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>开启合作</h3>
+                    <p>如果您对数据产品、空间分析或AI应用有兴趣，欢迎联系我。</p>
+                    <div class="contact-links">
+                        <a href="mailto:example@email.com" class="contact-link">
+                            <div class="link-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="link-text">
+                                <span class="link-label">邮箱</span>
+                                <span class="link-value">example@email.com</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-link">
+                            <div class="link-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="link-text">
+                                <span class="link-label">GitHub</span>
+                                <span class="link-value">github.com/username</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-link">
+                            <div class="link-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="link-text">
+                                <span class="link-label">LinkedIn</span>
+                                <span class="link-value">linkedin.com/in/username</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言</label>
+                            <textarea id="message" name="message" placeholder="请输入您的留言..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>发送消息</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">HYJ</span>
+                    <span class="logo-dot"></span>
+                </div>
+                <p class="footer-text">数据驱动 · 空间智能 · 商业洞察</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copyright">© 2024 胡英杰. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+
+    <!--
+    ============================================
+    GitHub Pages 部署说明
+    ============================================
+    
+    1. 创建 GitHub 仓库
+       - 登录 GitHub，点击 "New repository"
+       - 仓库名称建议: portfolio
+       - 选择 Public 权限
+       - 点击 "Create repository"
+    
+    2. 上传文件
+       - 在仓库页面点击 "uploading an existing file"
+       - 将整个 "作品集网站_v2" 文件夹拖入上传区域
+       - 确保目录结构为:
+         portfolio/
+         ├── index.html
+         ├── assets/
+         │   ├── style.css
+         │   └── script.js
+         └── 用户上传/ (包含所有图片)
+       - 点击 "Commit changes"
+    
+    3. 启用 GitHub Pages
+       - 在仓库页面点击 "Settings"
+       - 滚动到 "Pages" 部分
+       - Source 选择 "Deploy from a branch"
+       - Branch 选择 "main" 和 "/ (root)"
+       - 点击 "Save"
+    
+    4. 访问网站
+       - 等待 1-2 分钟构建
+       - 访问 https://[your-username].github.io/portfolio
+    
+    ============================================
+    -->
 </body>
 </html>
